@@ -2,9 +2,8 @@
 
 
 
-void excercise::setValues(int id, muscleGroup muscleGroup, string name, string desciption, intensity level, PP movement, modality moda, joint wholistic)
+void excercise::setValues(muscleGroup muscleGroup, string name, string desciption, intensity level, PP movement, modality moda, joint wholistic)
 {
-	this->id = id;
 	this->muscles = muscleGroup;
 	this->name = name;
 	this->description = desciption;
@@ -14,31 +13,46 @@ void excercise::setValues(int id, muscleGroup muscleGroup, string name, string d
 	this->wholistic = wholistic;
 }
 
-void excercise::createID(excercise& obj)
-{
-	// create id
-	// 	   this can probably be run everytime because it literally does not matter
-	// 16 muscle groups
-	// 3 intensity levels
-	// 2 push or pull movement
-	// 4 equipment levels
-	// 2 joints iso or comp
-	// (muscle)(level)(pp)(equipment)(joint)(excercise) XX-X-X-X-X-XXX
-	
-	int muscle = (int)obj.muscles;
-	int intensity = (int)obj.level;
-	int pp = (int)obj.movement;
-	int equipment = (int)obj.moda;
-	int wholistic = (int)obj.wholistic;
 
-	string muscleString = to_string(muscle);
-	string intensityString = to_string(intensity);
-	string ppString = to_string(pp);
-	string equipmentString = to_string(equipment);
-	string wholisticString = to_string(wholistic);
-	string excString = to_string(obj.excNum);
-
-	string idNumber = wholisticString + equipmentString + ppString + intensityString + muscleString + excString;
-
-	obj.id = stoi(idNumber);
+// helper functions
+muscleGroup stringToMuscleGroup(string a) {
+	switch (stoi(a))
+	{
+	case stoi("Abdominals - Lower") :
+		break;
+	case stoi("Abdominals - Obliques") :
+			break;
+	case sizeof("Abdominals - Total") :
+			break;
+	case sizeof("Abdominals - Upper"):
+		break;
+	case sizeof("Back - Latissimus Dorsi"):
+		break;
+	case sizeof("Back - Lat.Dorsi / Rhomboids"):
+		break;
+	case sizeof("Biceps"):
+		break;
+	case sizeof("Calves - Gastrocnemius"):
+		break;
+	case sizeof("Calves - Soleus"):
+		break;
+	case sizeof("Chest - Pectoralis"):
+		break;
+	case sizeof("Legs - Hamstrings"):
+		break;
+	case sizeof("Legs - Quadriceps"):
+		break;
+	case sizeof("Lower Back - Erector Spinae"):
+		break;
+	case sizeof("Shoulders - Delts / Traps"):
+		break;
+	case sizeof("Shoulders - Rotator Cuff"):
+		break;
+	case sizeof("Triceps"):
+		break;
+	}
 }
+intensity stringToIntensity(string a);
+PP stringToPushPull(string a);
+modality stringToModality(string a);
+joint stringToJoing(string a);
