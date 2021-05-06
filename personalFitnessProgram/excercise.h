@@ -32,4 +32,4 @@ muscleGroup stringToMuscleGroup(string);
 intensity stringToIntensity(string);
 PP stringToPushPull(string);
 modality stringToModality(string);
-joint stringToJoing(string);
+joint stringToJoint(string);

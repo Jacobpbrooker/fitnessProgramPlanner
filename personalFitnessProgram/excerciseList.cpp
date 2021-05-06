@@ -1,9 +1,12 @@
 #include <vector>
 #include <string>
 #include <fstream>
+#include <sstream>
 #include <iostream>
 
 #include "excerciseList.h"
+
+extern int excerciseCounter = 0;
 
 void excerciseList::loadExcercises(string fileName)
 {
@@ -18,15 +21,30 @@ void excerciseList::loadExcercises(string fileName)
 			getline(fin, line);		// get the entire line and then will need to parse data to create the objects needed
 
 			istringstream issLine(line);
-			string xstring;
-			string ystring;
-			string zstring;
-			string orientationString;
+			string muscleGRP;
+			string exc;
+			string lvl;
+			string pushp;
+			string modi;
+			string jnt;
 
-			getline(issLine, xstring, ',');
-			getline(issLine, ystring, ',');
-			getline(issLine, zstring, ',');
-			getline(issLine, orientationString);
+			getline(issLine, muscleGRP, ',');
+			getline(issLine, exc, ',');
+			getline(issLine, lvl, ',');
+			getline(issLine, pushp, ',');
+			getline(issLine, modi, ',');
+			getline(issLine, jnt);
+
+
+			muscleGroup m_grp = stringToMuscleGroup(muscleGRP);
+			intensity i_ty = stringToIntensity(lvl);
+			PP p_p = stringToPushPull(pushp);
+			modality m_ty = stringToModality(modi);
+			joint j_nt = stringToJoint(jnt);
+
+			excercise excer(m_grp, exc, "N/A", i_ty, p_p, m_ty, j_nt, ++excerciseCounter);
+
+			
 
 		}
 	}
