@@ -43,7 +43,60 @@ void excerciseList::loadExcercises(string fileName)
 									
 			excercise excer(m_grp, exc, "N/A", i_ty, p_p, m_ty, j_nt, ++excerciseCounter);  // create the excercise object 
 			
-			this->allExcercises.push_back(excer);
+			switch (excer.getMuscles())
+			{
+			case muscleGroup::NONE:
+				this->NONE.push_back(excer);
+				break;
+			case muscleGroup::AbdominalsLower:
+				this->AbLow.push_back(excer);
+				break;
+			case muscleGroup::AbdominalsObliques:
+				this->AbObl.push_back(excer);
+				break;
+			case muscleGroup::AbdominalsTotal:
+				this->AbTot.push_back(excer);
+				break;
+			case muscleGroup::AbdominalsUpper:
+				this->AbUpp.push_back(excer);
+				break;
+			case muscleGroup::BackLatissimusDorsi:
+				this->BackLatDor.push_back(excer);
+				break;
+			case muscleGroup::BackLatDorsiRhomboids:
+				this->BackLatRhom.push_back(excer);
+				break;
+			case muscleGroup::Biceps:
+				this->Bic.push_back(excer);
+				break;
+			case muscleGroup::CalvesGastrocnemius:
+				this->CalGas.push_back(excer);
+				break;
+			case muscleGroup::CalvesSoleus:
+				this->CalSol.push_back(excer);
+				break;
+			case muscleGroup::ChestPectoralis:
+				this->ChestPec.push_back(excer);
+				break;
+			case muscleGroup::LegsHamstrings:
+				this->LegHam.push_back(excer);
+				break;
+			case muscleGroup::LegsQuadriceps:
+				this->LegQuad.push_back(excer);
+				break;
+			case muscleGroup::LowerBackErectorSpinae:
+				this->LowBack.push_back(excer);
+				break;
+			case muscleGroup::ShouldersDeltsTraps:
+				this->ShouldDelt.push_back(excer);
+				break;
+			case muscleGroup::ShouldersRotatorCuff:
+				this->ShouldRot.push_back(excer);
+				break;
+			case muscleGroup::Triceps:
+				this->Tric.push_back(excer);
+				break;
+			}
 		}
 	}
 	else

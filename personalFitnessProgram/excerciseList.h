@@ -4,8 +4,8 @@
 
 using namespace std;
 
-class excerciseList
-{
+class excerciseList{
+	vector <excercise> NONE;
 	vector <excercise> AbLow;
 	vector <excercise> AbObl;
 	vector <excercise> AbTot;
@@ -23,6 +23,6 @@ class excerciseList
 	vector <excercise> ShouldRot;
 	vector <excercise> Tric;
 public:
-	void loadExcercises(string fileName); //this needs to load for individual lists
+	void loadExcercises(string fileName);
 };
 

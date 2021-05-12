@@ -13,6 +13,10 @@ void excercise::setValues(muscleGroup muscleGroup, string name, string desciptio
 	this->wholistic = wholistic;
 }
 
+muscleGroup excercise::getMuscles()
+{
+	return this->muscles;
+}
 
 // helper functions
 muscleGroup stringToMuscleGroup(string a) {
@@ -113,3 +117,4 @@ joint stringToJoint(string a) {
 	else
 		return joint::NONE;
 }
+
