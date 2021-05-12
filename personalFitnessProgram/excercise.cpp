@@ -28,7 +28,7 @@ string excercise::getDescription() {
 // helper functions
 muscleGroup stringToMuscleGroup(string a) {
 	//I hate this so much, maybe use a hash table or something to index the values for lookup
-	
+	// this is broken below
 	string alow = "Abdominals - Lower";
 	string aobl = "Abdominals - Obliques";
 	string atot = "Abdominals - Total";

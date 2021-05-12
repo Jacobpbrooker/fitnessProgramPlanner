@@ -151,3 +151,8 @@ vector<excercise> excerciseList::getShouldRot() {
 vector<excercise> excerciseList::getTric() {
 	return this->Tric;
 }
+
+void excerciseList::displayAll() {
+	for (int i = 0; i < this->AbLow.size(); i++)
+		cout << "Excercise: " << this->AbLow[i].getName() << endl;
+}

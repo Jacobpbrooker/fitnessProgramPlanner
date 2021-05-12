@@ -16,7 +16,7 @@ int main(void)
 	
 	excerciseList all_excercises;
 	all_excercises.loadExcercises(filename);
-	
+	all_excercises.displayAll();
 	weeklyProgram weekly_program;
 	weekly_program.makeProgram(all_excercises, returnMuscleSelection());
 

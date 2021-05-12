@@ -24,7 +24,7 @@ class excerciseList{
 	vector <excercise> Tric;
 public:
 	void loadExcercises(string fileName);
-	
+	void displayAll();
 	vector<excercise> getAbLow();
 	vector<excercise> getAbObl();
 	vector<excercise> getAbTot();
