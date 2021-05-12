@@ -24,5 +24,22 @@ class excerciseList{
 	vector <excercise> Tric;
 public:
 	void loadExcercises(string fileName);
+	
+	vector<excercise> getAbLow();
+	vector<excercise> getAbObl();
+	vector<excercise> getAbTot();
+	vector<excercise> getAbUpp();
+	vector<excercise> getBackLatDor();
+	vector<excercise> getBackLatRhom();
+	vector<excercise> getBic();
+	vector<excercise> getCalGas();
+	vector<excercise> getCalSol();
+	vector<excercise> getChestPec();
+	vector<excercise> getLegHam();
+	vector<excercise> getLegQuad();
+	vector<excercise> getLowBack();
+	vector<excercise> getShouldDelt();
+	vector<excercise> getShouldRot();
+	vector<excercise> getTric();
 };
 

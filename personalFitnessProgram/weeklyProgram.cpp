@@ -1,5 +1,6 @@
 #include <vector>
 #include <iostream>
+#include <ctime>
 
 #include "weeklyProgram.h"
 
@@ -135,10 +136,78 @@ vector<muscleGroup> returnMuscleSelection() {
 void weeklyProgram::makeProgram(excerciseList all_excercises, vector<muscleGroup> user_parameters) {
 	// all excercises in all_excercises and quantities of the excercise are in the user_parameters vector list
 	// I need to randomly generate one excercise per user_parameters element
-	weeklyProgram program;
 
-	for (auto i : user_parameters) {
+	srand(time(0));
+	int x = 0;
 
+	for (int i = 0; i < user_parameters.size(); i++) {
+		switch (user_parameters[i])
+		{
+		case muscleGroup::AbdominalsLower:
+			x = rand() % all_excercises.getAbLow().size();
+			this->weeklyExercises.push_back(all_excercises.getAbLow()[x]);
+			break;
+		case muscleGroup::AbdominalsObliques:
+			x = rand() % all_excercises.getAbObl().size();
+			this->weeklyExercises.push_back(all_excercises.getAbObl()[x]);
+			break;
+		case muscleGroup::AbdominalsTotal:
+			x = rand() % all_excercises.getAbTot().size();
+			this->weeklyExercises.push_back(all_excercises.getAbTot()[x]);
+			break;
+		case muscleGroup::AbdominalsUpper:
+			x = rand() % all_excercises.getAbUpp().size();
+			this->weeklyExercises.push_back(all_excercises.getAbUpp()[x]);
+			break;
+		case muscleGroup::BackLatissimusDorsi:
+			x = rand() % all_excercises.getBackLatDor().size();
+			this->weeklyExercises.push_back(all_excercises.getBackLatDor()[x]);
+			break;
+		case muscleGroup::BackLatDorsiRhomboids:
+			x = rand() % all_excercises.getBackLatRhom().size();
+			this->weeklyExercises.push_back(all_excercises.getBackLatRhom()[x]);
+			break;
+		case muscleGroup::Biceps:
+			x = rand() % all_excercises.getBic().size();
+			this->weeklyExercises.push_back(all_excercises.getBic()[x]);
+			break;
+		case muscleGroup::CalvesGastrocnemius:
+			x = rand() % all_excercises.getCalGas().size();
+			this->weeklyExercises.push_back(all_excercises.getCalGas()[x]);
+			break;
+		case muscleGroup::CalvesSoleus:
+			x = rand() % all_excercises.getCalSol().size();
+			this->weeklyExercises.push_back(all_excercises.getCalSol()[x]);
+			break;
+		case muscleGroup::ChestPectoralis:
+			x = rand() % all_excercises.getChestPec().size();
+			this->weeklyExercises.push_back(all_excercises.getChestPec()[x]);
+			break;
+		case muscleGroup::LegsHamstrings:
+			x = rand() % all_excercises.getLegHam().size();
+			this->weeklyExercises.push_back(all_excercises.getLegHam()[x]);
+			break;
+		case muscleGroup::LegsQuadriceps:
+			x = rand() % all_excercises.getLegQuad().size();
+			this->weeklyExercises.push_back(all_excercises.getLegQuad()[x]);
+			break;
+		case muscleGroup::LowerBackErectorSpinae:
+			x = rand() % all_excercises.getLowBack().size();
+			this->weeklyExercises.push_back(all_excercises.getLowBack()[x]);
+			break;
+		case muscleGroup::ShouldersDeltsTraps:
+			x = rand() % all_excercises.getShouldDelt().size();
+			this->weeklyExercises.push_back(all_excercises.getShouldDelt()[x]);
+			break;
+		case muscleGroup::ShouldersRotatorCuff:
+			x = rand() % all_excercises.getShouldRot().size();
+			this->weeklyExercises.push_back(all_excercises.getShouldRot()[x]);
+			break;
+		case muscleGroup::Triceps:
+			x = rand() % all_excercises.getTric().size();
+			this->weeklyExercises.push_back(all_excercises.getTric()[x]);
+			break;
+		}
 	}
 
 

@@ -102,3 +102,52 @@ void excerciseList::loadExcercises(string fileName)
 	else
 		cout << "Failed to open file - " << fileName << endl;
 }
+
+vector<excercise> excerciseList::getAbLow() {
+	return this->AbLow;
+}
+vector<excercise> excerciseList::getAbObl() {
+	return this->AbObl;
+}
+vector<excercise> excerciseList::getAbTot() {
+	return this->AbTot;
+}
+vector<excercise> excerciseList::getAbUpp() {
+	return this->AbUpp;
+}
+vector<excercise> excerciseList::getBackLatDor() {
+	return this->BackLatDor;
+}
+vector<excercise> excerciseList::getBackLatRhom() {
+	return this->BackLatRhom;
+}
+vector<excercise> excerciseList::getBic() {
+	return this->Bic;
+}
+vector<excercise> excerciseList::getCalGas() {
+	return this->CalGas;
+}
+vector<excercise> excerciseList::getCalSol() {
+	return this->CalSol;
+}
+vector<excercise> excerciseList::getChestPec() {
+	return this->ChestPec;
+}
+vector<excercise> excerciseList::getLegHam() {
+	return this->LegHam;
+}
+vector<excercise> excerciseList::getLegQuad() {
+	return this->LegQuad;
+}
+vector<excercise> excerciseList::getLowBack() {
+	return this->LowBack;
+}
+vector<excercise> excerciseList::getShouldDelt() {
+	return this->ShouldDelt;
+}
+vector<excercise> excerciseList::getShouldRot() {
+	return this->ShouldRot;
+}
+vector<excercise> excerciseList::getTric() {
+	return this->Tric;
+}
