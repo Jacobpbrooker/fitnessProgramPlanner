@@ -7,6 +7,8 @@ class weeklyProgram
 {
 	vector <excercise> weeklyExercises;
 public:
-	void makeProgram(vector <excercise>);
+	void makeProgram(vector <excercise>, vector<muscleGroup>);
+	vector<muscleGroup> returnMuscleSelection();
 };
 
+void muscleGroupMenu();
