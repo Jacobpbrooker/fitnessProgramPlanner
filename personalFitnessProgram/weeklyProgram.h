@@ -4,11 +4,11 @@
 
 using namespace std;
 
-class weeklyProgram
-{
+class weeklyProgram {
 	vector <excercise> weeklyExercises;
 public:
 	void makeProgram(excerciseList, vector<muscleGroup>);
+	void displayProgram();
 };
 
 vector<muscleGroup> returnMuscleSelection();

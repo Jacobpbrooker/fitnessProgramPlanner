@@ -18,6 +18,13 @@ muscleGroup excercise::getMuscles()
 	return this->muscles;
 }
 
+string excercise::getName() {
+	return this->name;
+}
+string excercise::getDescription() {
+	return this->description;
+}
+
 // helper functions
 muscleGroup stringToMuscleGroup(string a) {
 	//I hate this so much, maybe use a hash table or something to index the values for lookup

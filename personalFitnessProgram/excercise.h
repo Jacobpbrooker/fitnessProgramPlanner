@@ -26,6 +26,8 @@ public:
 	excercise(muscleGroup b, string c, string d, intensity e, PP f, modality g, joint h, int num) : muscles(b), name(c), description(d), level(e), movement(f), moda(g), wholistic(h), excNum(++num) {};
 	void setValues(muscleGroup muscleGroup, string name, string desciption, intensity level, PP movement, modality moda, joint wholistic);
 	muscleGroup getMuscles();
+	string getName();
+	string getDescription();
 };
 
 // helper functions

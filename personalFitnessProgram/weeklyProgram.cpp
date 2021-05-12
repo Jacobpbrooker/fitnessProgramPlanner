@@ -209,7 +209,11 @@ void weeklyProgram::makeProgram(excerciseList all_excercises, vector<muscleGroup
 			break;
 		}
 	}
+}
 
-
-
+void weeklyProgram::displayProgram() {
+	for (int i = 0; i < weeklyExercises.size(); i++) {
+		cout << "Excercise: " << weeklyExercises[i].getName() <<  endl;
+		cout << "Description - " << weeklyExercises[i].getDescription() << endl;
+	}
 }
