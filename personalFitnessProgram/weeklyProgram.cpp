@@ -24,7 +24,7 @@ void muscleGroupMenu() {
 	cout << "16. Triceps" << endl;
 }
 
-vector<muscleGroup> weeklyProgram::returnMuscleSelection() {
+vector<muscleGroup> returnMuscleSelection() {
 	vector <muscleGroup> muscleSelection;
 	bool cont = true;
 	int selection;
@@ -132,8 +132,14 @@ vector<muscleGroup> weeklyProgram::returnMuscleSelection() {
 	return muscleSelection;
 }
 
-void weeklyProgram::makeProgram(vector <excercise> list, vector<muscleGroup>) {
+void weeklyProgram::makeProgram(excerciseList all_excercises, vector<muscleGroup> user_parameters) {
+	// all excercises in all_excercises and quantities of the excercise are in the user_parameters vector list
+	// I need to randomly generate one excercise per user_parameters element
+	weeklyProgram program;
 
+	for (auto i : user_parameters) {
+
+	}
 
 
 
