@@ -5,24 +5,16 @@
 #include "weeklyProgram.h"
 
 void muscleGroupMenu() {
-	cout << "Options" << endl;
-	cout << "0. Exit to program creation" << endl;
-	cout << "1. AbdominalsLower" << endl;
-	cout << "2. AbdominalsObliques" << endl;
-	cout << "3. AbdominalsTotal" << endl;
-	cout << "4. AbdominalsUpper" << endl;
-	cout << "5. BackLatissimusDorsi" << endl;
-	cout << "6. BackLatDorsiRhomboids" << endl;
-	cout << "7. Biceps" << endl;
+	cout << endl << "Options" << endl;
+	cout << "0. Exit to program creation" << "	|" << "9. CalvesSoleus" << endl;
+	cout << "1. AbdominalsLower" << "		|" << "10. ChestPectoralis" << endl;
+	cout << "2. AbdominalsObliques" << "		|" << "11. LegsHamstrings" << endl;
+	cout << "3. AbdominalsTotal" << "		|" << "12. LegsQuadriceps" << endl;
+	cout << "4. AbdominalsUpper" << "		|" << "13. LowerBackErectorSpinae" << endl;
+	cout << "5. BackLatissimusDorsi" << "		|" << "14. ShouldersDeltsTraps" << endl;
+	cout << "6. BackLatDorsiRhomboids" << "	|" << "15. ShouldersRotatorCuff" << endl;
+	cout << "7. Biceps" << "			|" << "16. Triceps" << endl;
 	cout << "8. CalvesGastrocnemius" << endl;
-	cout << "9. CalvesSoleus" << endl;
-	cout << "10. ChestPectoralis" << endl;
-	cout << "11. LegsHamstrings" << endl;
-	cout << "12. LegsQuadriceps" << endl;
-	cout << "13. LowerBackErectorSpinae" << endl;
-	cout << "14. ShouldersDeltsTraps" << endl;
-	cout << "15. ShouldersRotatorCuff" << endl;
-	cout << "16. Triceps" << endl;
 }
 
 vector<muscleGroup> returnMuscleSelection() {
@@ -36,8 +28,10 @@ vector<muscleGroup> returnMuscleSelection() {
 		muscleGroupMenu();
 		cout << "Muscle Selection: ";
 		cin >> selection;
-		cout << "How many excercises would you like to add?: ";
-		cin >> quantity;
+		if (selection > 0) {
+			cout << "How many excercises would you like to add?: ";
+			cin >> quantity;
+		}
 
 		switch (selection)
 		{
