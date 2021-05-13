@@ -153,6 +153,51 @@ vector<excercise> excerciseList::getTric() {
 }
 
 void excerciseList::displayAll() {
+	cout << endl << "Abdominal" << endl;
 	for (int i = 0; i < this->AbLow.size(); i++)
 		cout << "Excercise: " << this->AbLow[i].getName() << endl;
+	for (int i = 0; i < this->AbObl.size(); i++)
+		cout << "Excercise: " << this->AbObl[i].getName() << endl;
+	for (int i = 0; i < this->AbTot.size(); i++)
+		cout << "Excercise: " << this->AbTot[i].getName() << endl;
+	for (int i = 0; i < this->AbUpp.size(); i++)
+		cout << "Excercise: " << this->AbUpp[i].getName() << endl;
+	
+	cout << endl << "Back" << endl;
+	for (int i = 0; i < this->BackLatDor.size(); i++)
+		cout << "Excercise: " << this->BackLatDor[i].getName() << endl;
+	for (int i = 0; i < this->BackLatRhom.size(); i++)
+		cout << "Excercise: " << this->BackLatRhom[i].getName() << endl;
+	for (int i = 0; i < this->LowBack.size(); i++)
+		cout << "Excercise: " << this->LowBack[i].getName() << endl;
+	
+	cout << endl << "Biceps" << endl;
+	for (int i = 0; i < this->Bic.size(); i++)
+		cout << "Excercise: " << this->Bic[i].getName() << endl;
+	
+	cout << endl << "Calves" << endl;
+	for (int i = 0; i < this->CalGas.size(); i++)
+		cout << "Excercise: " << this->CalGas[i].getName() << endl;
+	for (int i = 0; i < this->CalSol.size(); i++)
+		cout << "Excercise: " << this->CalSol[i].getName() << endl;
+	
+	cout << endl << "Chest" << endl;
+	for (int i = 0; i < this->ChestPec.size(); i++)
+		cout << "Excercise: " << this->ChestPec[i].getName() << endl;
+	
+	cout << endl << "Legs" << endl;
+	for (int i = 0; i < this->LegHam.size(); i++)
+		cout << "Excercise: " << this->LegHam[i].getName() << endl;
+	for (int i = 0; i < this->LegQuad.size(); i++)
+		cout << "Excercise: " << this->LegQuad[i].getName() << endl;
+	
+	cout << endl << "Shoulders" << endl;
+	for (int i = 0; i < this->ShouldDelt.size(); i++)
+		cout << "Excercise: " << this->ShouldDelt[i].getName() << endl;
+	for (int i = 0; i < this->ShouldRot.size(); i++)
+		cout << "Excercise: " << this->ShouldRot[i].getName() << endl;
+	
+	cout << endl << "Triceps" << endl;
+	for (int i = 0; i < this->Tric.size(); i++)
+		cout << "Excercise: " << this->Tric[i].getName() << endl;
 }
